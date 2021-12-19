@@ -1,0 +1,4 @@
+{
+    "productsApi" : "https://fakestoreapi.com/products",
+    "categoryApi" : "https://fakestoreapi.com/products/categories"
+}
