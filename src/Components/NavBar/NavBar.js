@@ -12,6 +12,7 @@ import StoreIcon from '@mui/icons-material/Store';
 import SearchIcon from '@mui/icons-material/Search';
 import LandingImage from '../../assets/LandingImage.jpg';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import {BrowesrRouter,Link , Router,Route,Switch,useHistory} from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -56,6 +57,10 @@ const Search = styled('div')(({ theme }) => ({
   }));
 
 const NavBar = () => {
+
+  const history = useHistory();
+
+
     return (
     <div>    
  <Box sx={{ flexGrow: 1 }}>
@@ -78,7 +83,7 @@ const NavBar = () => {
           >
             FAKE STORE
           </Typography>
-          <LocalGroceryStoreIcon/>
+          <LocalGroceryStoreIcon onClick={()=>history.push("/Cart")} style={{cursor:'pointer'}} />
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
